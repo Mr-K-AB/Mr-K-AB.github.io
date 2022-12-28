@@ -12,7 +12,6 @@ body {
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
-  height: 4cm;
   /* font-size: 200%; */
  }
  .profile_name
@@ -20,6 +19,13 @@ body {
   font-weight: bolder;
   font-size: xx-large;
   font-style:normal;
+ }
+
+ .dp{
+  padding-top: 2cm;
+  padding-right: 0.5cm;
+  align-self: right;
+  
  }
 
 .topmenu {
