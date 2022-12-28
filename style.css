@@ -12,7 +12,7 @@ body {
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
-  height: 5cm;
+  height: 10cm;
   /* font-size: 200%; */
 
 }
@@ -25,9 +25,7 @@ body {
  }
 
  .dp{
-  padding-top: 2cm;
-  padding-right: 0.5cm;
-  align-self: right;
+  float:right;
   size: 100%;
  }
 
