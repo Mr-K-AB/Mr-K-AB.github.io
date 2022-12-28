@@ -8,10 +8,12 @@ body {
   background-color:  #7600bc;
   padding-bottom: -1cm;
   margin-left:-1cm;
-  margin-right:-1cm;
+  margin-right: -1cm;
   margin-top:-1cm;
-  padding-top: 2cm;
+  padding-top: 3cm;
   padding-bottom: 0cm;
+  padding-right: 1cm;
+  padding-left: 0.5cm;
   height:max-content;
   /* font-size: 200%; */
 
