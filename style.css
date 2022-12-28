@@ -12,7 +12,7 @@ body {
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
-  height: 3cm;
+  height: 5cm;
   /* font-size: 200%; */
 
 }
@@ -28,6 +28,7 @@ body {
   padding-top: 2cm;
   padding-right: 0.5cm;
   align-self: right;
+  size: 100%;
  }
 
 .topmenu {
