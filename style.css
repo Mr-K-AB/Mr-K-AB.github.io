@@ -6,13 +6,13 @@ body {
 
 #home {
   background-color:  #7600bc;
-  padding-bottom: 1cm;
+  padding-bottom: -1cm;
   margin-left:-1cm;
   margin-right:-1cm;
   margin-top:-1cm;
   padding-top: 2cm;
-  padding-bottom: 2cm;
-  height: 10cm;
+  padding-bottom: 0cm;
+  height:max-content;
   /* font-size: 200%; */
 
 }
@@ -30,15 +30,17 @@ body {
  }
 
 .topmenu {
-  color: lightgray;
+  color: rgb(168, 18, 18);
   margin: 10px;
   padding: 20px;
   /* font-size: 125%; */
   text-decoration:none;
+  font-size:medium
+
 }
 
 .topmenu:hover {
-  color: white;
+  color: rgb(58, 58, 58);
   /* Add the styles here */
 }
 
@@ -48,7 +50,7 @@ body {
 }
 
 .profile_name {
-  float: left;
+  float: right;
   padding-left: 2cm;
   /* Add the styles here */
 }
