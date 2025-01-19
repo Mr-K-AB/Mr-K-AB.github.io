@@ -40,7 +40,6 @@
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
-                <!-- <a href="#image">Image</a> -->
                 
             </div>
             
@@ -53,21 +52,41 @@
 
     </header>
     <main>
-        
-        
-        
+
         <div class="profile-info">
-            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="mr-mis-ab-v-p" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/mr-mis-ab-v-p?trk=profile-badge">V P MIS AB</a></div>
+            <!-- linkedin tile -->
+            <div class="linkedin-tile">
+                <img src="https://media.licdn.com/dms/image/D5603AQFnzBxnkMrZrw/profile-displayphoto-shrink_200_200/0/1686764941508?e=1691625600&v=beta&t=Ij1Oj_Ue_2Iy5Ue4Ue4Ue4Ue4Ue4Ue4Ue4Ue4Ue" alt="V P MIS AB LinkedIn Profile Picture">
+                <div class="linkedin-info">
+                    <h3>V P MIS AB</h3>
+                    <p>Data Scientist | Full Stack Developer | AI/ML Enthusiast</p>
+                    <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank" class="linkedin-button">
+                        <i class="fab fa-linkedin"></i> View Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- resume tile -->
+            <div class="resume-tile" onclick="openResumePopup()">
+                <img src="https://media.licdn.com/dms/image/D5603AQFnzBxnkMrZrw/profile-displayphoto-shrink_200_200/0/1686764941508?e=1691625600&v=beta&t=Ij1Oj_Ue_2Iy5Ue4Ue4Ue4Ue4Ue4Ue4Ue4Ue" alt="Resume Thumbnail">
+                <span>View Resume</span>
+            </div>
         </div>
 
 
-        
+        <!-- Resume Popup -->
+        <div id="resume-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeResumePopup()">&times;</span>
+                <iframe src="./docs/Resume_VP_MIS AB.pdf" width="100%" height="600px"></iframe>
+            </div>
+        </div>
 
         <section id="summary">
             <h2>Summary</h2>
-            <p>Driven computer science engineering student at IIT Palakkad with a passion for coding and hands-on projects. Experienced full-stack developer intern at Siemens working with AI/ML models, data processing, frontend frameworks like Angular and React, and API design. Proven ability to lead teams as General Secretary of Academic Affairs and project manager for .NET Core messenger app. Actively involved in coding club activities and industry-academia collaborations. Strong problem-solving skills with experience building applications like e-commerce websites, information retrieval systems, and vehicle recognition models. Eager to leverage technical skills in a challenging role that allows continuous learning and growth.</p>
+            <p>Results-driven Data Scientist at Turing, specializing in AI/ML models, data processing, and full-stack development. Experienced in designing and deploying scalable AI solutions, working with deep learning frameworks, and optimizing data pipelines. Former full-stack developer intern at Siemens, with expertise in Angular, React, FastAPI, and PostgreSQL. Led multiple projects, including a .NET Core messenger app and AI-driven data visualization models. Served as General Secretary of Academic Affairs at IIT Palakkad, fostering industry-academia collaborations. Passionate about cutting-edge AI research, with experience in GANs, NLP, and computer vision. Actively seeking roles in Data Science or Data Engineering in Germany to apply technical expertise in high-impact projects.</p>
         </section>
+        
 
 
 
@@ -75,27 +94,28 @@
         <section id="experience">
           <h2>Experience</h2>
           
-              
+                    <h3>Turing</h3>
+                    <p>1 year - (Current)</p>
+                        <div class="experience-grid">
+                            <div class="experience-item">
+                                <h4>Data Scientist</h4>
+                                <p>May 2024 - Current<br>
+                                    Palo Alto (Hybrid)</p>
+                                <p>Developed and optimized large-scale AI models, improving accuracy by 12% and reducing training time by 15%. Implemented advanced techniques like reinforcement learning and multimodal processing. Created custom Python functions for LLMs, conducted performance evaluations, and performed data analysis to enhance AI system performance.</p>
+                            </div>
+                    </div>      
+
+
                   <h3>Siemens</h3>
-                  <div class="experience-grid">
-                      <div class="experience-item">
-                          <h4>Full Stack Developer intern</h4>
-                          <p>May 2023 - September 2023 (5 months)<br>
-                          Bengaluru, Karnataka, India</p>
-                          <p>Technical Intern at Siemens. Projects included AI-ML model training with Tensorflow and Pytorch, data processing, Frontend(Angular, React), API design(Open API, Fast API)</p>
-                      </div>
+                    <p>4 Months</p>
+                        <div class="experience-grid">
+                            <div class="experience-item">
+                                <h4>Full Stack Developer intern</h4>
+                                <p>May 2023 - September 2023 (5 months)<br>
+                                Bengaluru, Karnataka, India</p>
+                                <p>Technical Intern at Siemens. Projects included AI-ML model training with Tensorflow and Pytorch, data processing, Frontend(Angular, React), API design(Open API, Fast API)</p>
+                            </div>
                   </div>
-      
-              
-                  <h3>YACC Yet Another Coding Club</h3>
-                    <div class="experience-grid">
-                        <div class="experience-item">
-                          <h4>Club Associate</h4>
-                          <p>May 2023 - April 2024 (1 year)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Serving as club Associate @ Yacc - yet another coding club, the coding club of IIT PALAKKAD</p>
-                        </div>
-                    </div>
       
               
                   <h3>Indian Institute of Technology, Palakkad</h3>
@@ -103,10 +123,10 @@
                     <div class="experience-grid">
                   
                         <div class="experience-item">
-                          <h4>General secretary Academic Affairs</h4>
-                          <p>April 2023 - April 2024 (1 year 1 month)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Working as General Secretary Academic Affairs, in Student affairs council (SAC) of Indian institute of technology Palakkad. It is students representative position to represent the whole institute community in academic related matters and, to plan and execute various activities and conclaves including the IAC (Industry Academia Conclave), where 50+ industries and Academia delegates become part of, and activities of institute career development cell. Representing and handling all matters related to these in institutions senate meeting, BoS meetings and all other higher councils and meetings. The selection was done through election.</p>
+                            <h4>General secretary Academic Affairs</h4>
+                            <p>April 2023 - April 2024 (1 year 1 month)<br>
+                            Palghat, Kerala, India</p>
+                            <p>Working as General Secretary Academic Affairs, in Student affairs council (SAC) of Indian institute of technology Palakkad. It is students representative position to represent the whole institute community in academic related matters and, to plan and execute various activities and conclaves including the IAC (Industry Academia Conclave), where 50+ industries and Academia delegates become part of, and activities of institute career development cell. Representing and handling all matters related to these in institutions senate meeting, BoS meetings and all other higher councils and meetings. The selection was done through election.</p>
                         </div>
                     
                         <div class="experience-item">
@@ -122,15 +142,15 @@
                         </div>
 
                         <div class="experience-item">
-                          <h4>eCommerce store website with backend exclusively for footwear</h4>
-                          <p>January 2023 - May 2023 (5 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Designed database schema, and implemented backend Database and front end for the eCommerce store exclusively for footwear, as part of course project for DBMS course.</p>
-                            <a href="https://gitlab.com/mr_ab/shoe-hub" target="_blank">
-                            <div id="shoe-hub-thumbnail">
-                                <img src="https://opengraph.githubassets.com/1/mr_ab/shoe-hub" alt="GitLab Repository Thumbnail">
-                            </div>
-                            </a>
+                            <h4>eCommerce store website with backend exclusively for footwear</h4>
+                            <p>January 2023 - May 2023 (5 months)<br>
+                            Palghat, Kerala, India</p>
+                            <p>Designed database schema, and implemented backend Database and front end for the eCommerce store exclusively for footwear, as part of course project for DBMS course.</p>
+                                <a href="https://gitlab.com/mr_ab/shoe-hub" target="_blank">
+                                <div id="shoe-hub-thumbnail">
+                                    <img src="https://opengraph.githubassets.com/1/mr_ab/shoe-hub" alt="GitLab Repository Thumbnail">
+                                </div>
+                                </a>
                         </div>
 
                         <div class="experience-item">
@@ -146,54 +166,13 @@
                         </div>
                     
                         <div class="experience-item">
-                          <h4>Class Rep</h4>
-                          <p>August 2022 - May 2023 (10 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Class rep for the CSE B20 @ IIT Palakkad for consecutive 2 semesters of 5 and 6</p>
-                        </div>
-                    
-                        <div class="experience-item">
-                          <h4>Project Intern as System Admin for HPC for department cluster</h4>
-                          <p>December 2022 - April 2023 (5 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>ICSR is the CENTRE FOR INDUSTRY COLLABORATION AND SPONSERED RESEARCH at IIT PALAKKAD. My responsibilities as a project intern included the following, but not limited to.</p>
-                          <p>Settings up and maintaining department cluster for computation and simulation of various molecules, elements, and meterials. And setting up of various packages, libraries and other requirements and utilities required for processes, setting up PBS and SLURM job schedulers and writing job scripts for using various packages for simulation, computation etc in PBS and SLURM job schedulers and workload managers to be used in High Performance Computing Facilities.</p>
-                      </div>
-      
-                      <div class="experience-item">
-                          <h4>Information retrieval: Search engine model on given data corpus</h4>
-                          <p>June 2022 - December 2022 (7 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Designed a front end for a Search engine model, and incorporating it with the backend APIs for passing query structure, retrieving the results and displaying it. The data corpus was generated by web scraping on Wikipedia, and the backend was designed using Elastic search, which is the most widely used backend for data retrieval in the industry. The query structure, querying methods, query weights, data retrieval, and methods for ranking the retrieved data etc where implemented by us in this backend, when we required a variety of ranking functions, like BM25, and many.</p>
-                      </div>
-      
-                      <div class="experience-item">
-                          <h4>Vehicle Recognition with sound (Neural network model training data collection, data preprocessing)</h4>
-                          <p>June 2022 - November 2022 (6 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Training a neural network model for vehicle recognition by identifying them with sound features. Initially, we collected data of engine notes of 3 classes of vehicles, then did preprocessing by trimming and converting them into mel spectrum. Then the model was trained over this data, Which gave us 97+% accuracy. This kind of model will be very helpful in low visibility conditions, for identifying vehicle types, and even manufacturers and engine type.</p>
-                      </div>
-      
-                      <div class="experience-item">
-                          <h4>Shannon Game - App development</h4>
-                            <h5>Unity engine 2D</h5><br>
-                          <p>May 2022 - August 2022 (4 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>Developed a game based on android,
-                            windows, ios. They game was the
-                            legendary Japanese Shannon switching game.
-                            We had 2 player mod,
-                            And one player playing against an AI model
-                            of fixed difficulty level.</p>
+                            <h4>Project Intern as System Admin for HPC for department cluster</h4>
+                            <p>December 2022 - April 2023 (5 months)<br>
+                            Palghat, Kerala, India</p>
+                            <p>ICSR is the CENTRE FOR INDUSTRY COLLABORATION AND SPONSERED RESEARCH at IIT PALAKKAD. My responsibilities as a project intern included the following, but not limited to.</p>
+                            <p>Settings up and maintaining department cluster for computation and simulation of various molecules, elements, and meterials. And setting up of various packages, libraries and other requirements and utilities required for processes, setting up PBS and SLURM job schedulers and writing job scripts for using various packages for simulation, computation etc in PBS and SLURM job schedulers and workload managers to be used in High Performance Computing Facilities.</p>
                       </div>
                     
-                      <div class="experience-item">
-                        <h4>Utility and Nav/direction app - App development</h4>
-                          <h5>Android studio</h5><br>
-                        <p>August 2023 - November 2023 (4 months)<br>
-                        Palghat, Kerala, India</p>
-                        <p>Developed an android app consisting of various utilities including Todo list, reminder/alarm, navigation and compass.</p>
-                    </div>
                     </div>
       
               
@@ -222,6 +201,14 @@
         <section id="skills">
             <h2>Important Skills</h2>
             <div class="skills-container">
+                <div class="skill-tile">
+                    <img src="images/icons/gcp-icon.svg" alt="GCP Icon">
+                    <span>Google Cloud Platform</span>
+                </div>
+                <div class="skill-tile">
+                    <img src="images/icons/aws-icon.svg" alt="AWS Icon">
+                    <span>Amazon Web Services</span>
+                </div>
                 <div class="skill-tile">
                     <img src="images/icons/gan-icon.png" alt="GAN Icon">
                     <span>Generative Adversarial Networks (GANs)</span>
@@ -285,33 +272,11 @@
                 <div class="contact-info">
 
 
-                <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <p><a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank">www.linkedin.com/in/mr-mis-ab-v-p</a></p>
-                </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <p><a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank">www.linkedin.com/in/mr-mis-ab-v-p</a></p>
+                    </div>
 
-                <div class="contact-item">
-                <i class="fas fa-globe"></i>
-                <p><a href="https://mr-k-ab.github.io/" target="_blank">mr-k-ab.github.io/</a></p>
-                </div>
-                
-                </div>
-                
-                <!-- Map Modal -->
-                <!-- <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
-                   <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="mapModalLabel">Location Map</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                    <div id="map" style="height: 400px; width: 100%;"></div>
-                    </div>
-                </div>
-                </div> -->
                 </div>
 
 
@@ -337,26 +302,10 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="6" required placeholder="Enter your message"></textarea>
                   </div>
-                  <!-- <div class="form-group form-group-checkbox">
-                    <input type="checkbox" id="subscribe" name="subscribe">
-                    <label for="subscribe">Subscribe to our newsletter</label>
-                  </div> -->
                   <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </section>
-
-
-        
-
-
-
-        <!-- <section id="image">
-            <h2>Image</h2>
-            <img src="images/dp.jpg" alt="Profile Picture">
-        </section> -->
-
-
 
 
         <!-- EmailJS -->
@@ -407,7 +356,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>V P MIS AB</h3>
-                <p>&copy; 2024 V P MIS AB. All rights reserved.</p>
+                <p>&copy; 2025 V P MIS AB. All rights reserved.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -416,7 +365,6 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <!-- <li><a href="#image">Image</a></li> -->
                 </ul>
             </div>
             <div class="footer-section">
