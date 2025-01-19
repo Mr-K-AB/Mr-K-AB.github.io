@@ -13,7 +13,13 @@ function toggleSticky() {
     }
 }
 
+function openResumePopup() {
+    document.getElementById('resume-popup').style.display = 'block';
+}
 
+function closeResumePopup() {
+    document.getElementById('resume-popup').style.display = 'none';
+}
 
 // contact
 
