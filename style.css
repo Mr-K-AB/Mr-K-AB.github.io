@@ -144,6 +144,7 @@ nav {
     background-color: #005582;
 }
 
+
 /* Resume Pop-up */
 .popup {
     display: none;
@@ -154,6 +155,8 @@ nav {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    padding: 20px; /* Padding on all sides */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 
 .popup-header {
@@ -165,15 +168,25 @@ nav {
 }
 
 .popup-content {
-    padding: 20px;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust height to account for header and padding */
     background-color: white;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Use flexbox to make iframe take full height */
+    flex-direction: column; /* Stack header and iframe vertically */
+}
+
+.popup-content iframe {
+    flex-grow: 1; /* Make iframe take remaining height */
+    width: 100%; /* Ensure iframe takes full width */
+    border: none; /* Remove iframe border */
 }
 
 .close {
     position: absolute;
-    top: 10px;
+    top: -10px;
     right: 20px;
     font-size: 30px;
     cursor: pointer;
