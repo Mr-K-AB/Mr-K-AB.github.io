@@ -54,25 +54,44 @@
     <main>
 
         <div class="profile-info">
-            <!-- linkedin tile -->
-            <div class="linkedin-tile">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" alt="V P MIS AB LinkedIn Profile Picture">
-                <div class="linkedin-info">
+            <!-- LinkedIn Tile -->
+            <div class="tile linkedin-tile">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" 
+                     alt="V P MIS AB LinkedIn Profile Picture">
+                <div class="tile-info">
                     <h3>V P MIS AB</h3>
                     <p>Data Scientist | Full Stack Developer | AI/ML Enthusiast</p>
-                    <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank" class="linkedin-button">
+                    <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank" class="button linkedin-button">
                         <i class="fab fa-linkedin"></i> View Profile
                     </a>
                 </div>
             </div>
         
-            <!-- resume tile -->
-            <div class="resume-tile" onclick="openResumePopup()">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" alt="Resume Thumbnail">
-                <span>View Resume</span>
+            <!-- GitHub Tile -->
+            <div class="tile github-tile">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+                     alt="GitHub Logo">
+                <div class="tile-info">
+                    <h3>GitHub Profile</h3>
+                    <p>Check out my projects and repositories.</p>
+                    <a href="https://github.com/Mr-K-AB" target="_blank" class="button github-button">
+                        <i class="fab fa-github"></i> View GitHub
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Resume Tile -->
+            <div class="tile resume-tile" onclick="openResumePopup()">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" 
+                     alt="Resume Thumbnail">
+                <div class="tile-info">
+                    <h3>Resume</h3>
+                    <p>Click to view my resume.</p>
+                    <span class="resume-button">View Resume</span>
+                </div>
             </div>
         </div>
-
+        
 
         <!-- Resume Popup -->
         <div id="resume-popup" class="popup">
