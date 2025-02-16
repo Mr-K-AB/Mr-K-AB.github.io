@@ -52,8 +52,8 @@ nav {
     padding: 10px 15px;
 }
 
-/* Linkedin Tile */
-.linkedin-tile {
+/* General Tile Styling */
+.tile {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -63,86 +63,97 @@ nav {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     max-width: 500px;
     margin: 20px auto;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
 }
 
-.linkedin-tile img {
+.tile:hover {
+    transform: scale(1.02);
+}
+
+.tile img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-right: 20px;
 }
 
-.linkedin-info {
+.tile-info {
     flex-grow: 1;
 }
 
-.linkedin-info h3 {
+.tile-info h3 {
     margin: 0 0 10px 0;
-    color: #0077B5;
-}
-
-.linkedin-info p {
-    margin: 0 0 15px 0;
     color: #333;
+    font-size: 20px;
 }
 
-.linkedin-button {
+.tile-info p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.button {
     display: inline-block;
-    background-color: #0077B5;
-    color: white;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    color: white;
+}
+
+/* LinkedIn Button */
+.linkedin-button {
+    background-color: #0077B5;
 }
 
 .linkedin-button:hover {
     background-color: #005582;
 }
 
-/* resume popup and tile */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-.popup-content {
-    position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    width: 80%;
-    background-color: white;
-}
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
-.resume-tile {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 500px;
-    margin: 20px auto;
-    cursor: pointer;
-    text-align: center;
-    flex-grow: 1;
-}
-.resume-tile img {
+/* GitHub Tile */
+.github-tile img {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+}
+
+.github-button {
+    background-color: #333;
+}
+
+.github-button:hover {
+    background-color: #1b1b1b;
+}
+
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    background-color: #0077B5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resume-button:hover {
+    background-color: #005582;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .tile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tile img {
+        margin: 0 auto 10px auto;
+    }
 }
 
 
