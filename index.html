@@ -3,390 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>V P MIS AB</title>
-
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>V P MIS AB | Portfolio</title>
+    <meta name="description" content="Data Scientist and Full Stack Developer specializing in AI/ML solutions">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css"/>
-    <script type="text/javascript" src="script.js"></script>
-
-    <!-- linkedin -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     
-
-   
-
-
+    <!-- LinkedIn -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
-    
-    
-    
-    <header>
-
-        
-
+    <header id="header">
         <nav>
             <div class="logo">
                 <a href="#"><i class="fas fa-code"></i> V P MIS AB</a>
             </div>
             
-            
-
-            <div class="nav-links">
-                <a href="#summary">Summary</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-                
+            <div class="nav-links" id="navLinks">
+                <a href="#summary" class="nav-item">Summary</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
             </div>
             
-            
-
-
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
-
-        <script type="text/javascript" src="script.js"></script>
-
     </header>
+    
     <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" 
+                         alt="V P MIS AB Profile Picture">
+                </div>
+                <div class="hero-text">
+                    <h1>V P MIS AB</h1>
+                    <h2>Data Scientist | Full Stack Developer | AI/ML Enthusiast</h2>
+                    <p>Building innovative AI solutions and data-driven applications</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                        <a href="#" class="btn secondary-btn" onclick="openResumePopup()">View Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="profile-info">
-            <!-- LinkedIn Tile -->
-            <div class="tile linkedin-tile">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" 
-                     alt="V P MIS AB LinkedIn Profile Picture">
-                <div class="tile-info">
-                    <h3>V P MIS AB</h3>
-                    <p>Data Scientist | Full Stack Developer | AI/ML Enthusiast</p>
-                    <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank" class="button linkedin-button">
-                        <i class="fab fa-linkedin"></i> View Profile
-                    </a>
+        <!-- Profile Info Cards -->
+        <section id="profile-cards">
+            <div class="profile-info">
+                <!-- LinkedIn Tile -->
+                <div class="tile linkedin-tile" data-aos="fade-up">
+                    <div class="tile-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="tile-info">
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                        <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank" class="button linkedin-button">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- GitHub Tile -->
+                <div class="tile github-tile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tile-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="tile-info">
+                        <h3>GitHub</h3>
+                        <p>Check out my projects and repositories</p>
+                        <a href="https://github.com/Mr-K-AB" target="_blank" class="button github-button">
+                            View GitHub
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Resume Tile -->
+                <div class="tile resume-tile" onclick="openResumePopup()" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tile-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="tile-info">
+                        <h3>Resume</h3>
+                        <p>View my complete professional background</p>
+                        <span class="resume-button">View Resume</span>
+                    </div>
                 </div>
             </div>
-        
-            <!-- GitHub Tile -->
-            <div class="tile github-tile">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-                     alt="GitHub Logo">
-                <div class="tile-info">
-                    <h3>GitHub Profile</h3>
-                    <p>Check out my projects and repositories.</p>
-                    <a href="https://github.com/Mr-K-AB" target="_blank" class="button github-button">
-                        <i class="fab fa-github"></i> View GitHub
-                    </a>
-                </div>
-            </div>
-        
-            <!-- Resume Tile -->
-            <div class="tile resume-tile" onclick="openResumePopup()">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" 
-                    alt="Resume Thumbnail">
-                <div class="tile-info">
-                    <h3>Resume</h3>
-                    <p>Click to view my resume.</p>
-                    <span class="resume-button">View Resume</span>
-                </div>
-            </div>
-        </div>
+        </section>
         
         <!-- Resume Popup -->
         <div id="resume-popup" class="popup">
-            <div class="popup-header">
-                <span class="close" onclick="closeResumePopup()">&times;</span>
-            </div>
             <div class="popup-content">
-                <iframe src="./docs/Resume_VP_MIS AB.pdf" width="100%" height="600px"></iframe>
+                <div class="popup-header">
+                    <h3>My Resume</h3>
+                    <span class="close" onclick="closeResumePopup()">&times;</span>
+                </div>
+                <div class="popup-body">
+                    <iframe src="./docs/Resume_VP_MIS AB.pdf" width="100%" height="100%"></iframe>
+                </div>
             </div>
         </div>
 
-
-        
-
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Results-driven Data Scientist at Turing, specializing in AI/ML models, data processing, and full-stack development. Experienced in designing and deploying scalable AI solutions, working with deep learning frameworks, and optimizing data pipelines. Former full-stack developer intern at Siemens, with expertise in Angular, React, FastAPI, and PostgreSQL. Led multiple projects, including a .NET Core messenger app and AI-driven data visualization models. Served as General Secretary of Academic Affairs at IIT Palakkad, fostering industry-academia collaborations. Passionate about cutting-edge AI research, with experience in GANs, NLP, and computer vision. Actively seeking roles in Data Science or Data Engineering in Germany to apply technical expertise in high-impact projects.</p>
-        </section>
-        
-
-
-
-
-        <section id="experience">
-          <h2>Experience</h2>
-          
-                    <h3>Turing</h3>
-                    <p>1 year - (Current)</p>
-                        <div class="experience-grid">
-                            <div class="experience-item">
-                                <h4>Data Scientist</h4>
-                                <p>May 2024 - Current<br>
-                                    Palo Alto (Hybrid)</p>
-                                <p>Developed and optimized large-scale AI models, improving accuracy by 12% and reducing training time by 15%. Implemented advanced techniques like reinforcement learning and multimodal processing. Created custom Python functions for LLMs, conducted performance evaluations, and performed data analysis to enhance AI system performance.</p>
-                            </div>
-                    </div>      
-
-
-                  <h3>Siemens</h3>
-                    <p>4 Months</p>
-                        <div class="experience-grid">
-                            <div class="experience-item">
-                                <h4>Full Stack Developer intern</h4>
-                                <p>May 2023 - September 2023 (5 months)<br>
-                                Bengaluru, Karnataka, India</p>
-                                <p>Technical Intern at Siemens. Projects included AI-ML model training with Tensorflow and Pytorch, data processing, Frontend(Angular, React), API design(Open API, Fast API)</p>
-                            </div>
-                  </div>
-      
-              
-                  <h3>Indian Institute of Technology, Palakkad</h3>
-                  <p>2 years</p>
-                    <div class="experience-grid">
-                  
-                        <div class="experience-item">
-                            <h4>General secretary Academic Affairs</h4>
-                            <p>April 2023 - April 2024 (1 year 1 month)<br>
-                            Palghat, Kerala, India</p>
-                            <p>Working as General Secretary Academic Affairs, in Student affairs council (SAC) of Indian institute of technology Palakkad. It is students representative position to represent the whole institute community in academic related matters and, to plan and execute various activities and conclaves including the IAC (Industry Academia Conclave), where 50+ industries and Academia delegates become part of, and activities of institute career development cell. Representing and handling all matters related to these in institutions senate meeting, BoS meetings and all other higher councils and meetings. The selection was done through election.</p>
+        <!-- Summary Section -->
+        <section id="summary" class="section-padding">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="summary-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="summary-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHltz9QznmT2g/profile-displayphoto-shrink_400_400/B56ZQWD3yZGQAg-/0/1735536902407?e=1743033600&v=beta&t=c1IFKxr9HGHbngZmFaUDdz10cguWeWdxqYTeLGpEgjY" alt="Profile Image">
+                </div>
+                <div class="summary-text">
+                    <p>Results-driven Data Scientist at Turing, specializing in AI/ML models, data processing, and full-stack development. Experienced in designing and deploying scalable AI solutions, working with deep learning frameworks, and optimizing data pipelines.</p>
+                    <p>Former full-stack developer intern at Siemens, with expertise in Angular, React, FastAPI, and PostgreSQL. Led multiple projects, including a .NET Core messenger app and AI-driven data visualization models.</p>
+                    <p>Served as General Secretary of Academic Affairs at IIT Palakkad, fostering industry-academia collaborations. Passionate about cutting-edge AI research, with experience in GANs, NLP, and computer vision.</p>
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-text">Years Experience</span>
                         </div>
-                    
-                        <div class="experience-item">
-                            <h4>.NET core Project Manager</h4>
-                            <p>August 2023 - December 2023 (5 months)<br>
-                            Palghat, Kerala, India</p>
-                            <p>Served as Project manager for the .NET core project for developing <a href="https://github.com/Mr-K-AB/se-proj1-messenger" target="_blank">MessengerApp</a></p>
-                            <a href="https://github.com/Mr-K-AB/se-proj1-messenger" target="_blank">
-                            <div id="messenger-app-thumbnail">
-                                <img src="https://opengraph.githubassets.com/1/Mr-K-AB/se-proj1-messenger" alt="GitHub Repository Thumbnail">
-                            </div>
-                            </a>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-text">Projects Completed</span>
                         </div>
-
-                        <div class="experience-item">
-                            <h4>eCommerce store website with backend exclusively for footwear</h4>
-                            <p>January 2023 - May 2023 (5 months)<br>
-                            Palghat, Kerala, India</p>
-                            <p>Designed database schema, and implemented backend Database and front end for the eCommerce store exclusively for footwear, as part of course project for DBMS course.</p>
-                                <a href="https://gitlab.com/mr_ab/shoe-hub" target="_blank">
-                                <div id="shoe-hub-thumbnail">
-                                    <img src="https://opengraph.githubassets.com/1/mr_ab/shoe-hub" alt="GitLab Repository Thumbnail">
-                                </div>
-                                </a>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-text">Technology Domains</span>
                         </div>
-
-                        <div class="experience-item">
-                            <h4>Text-to-Face image generation</h4>
-                            <p>January 2024 - April 2024 (4 months)<br>
-                            Palghat, Kerala, India</p>
-                            <p>A project utilizing GANs and StyleGAN3 to generate high-resolution facial images from textual descriptions through a custom neural network mapping text embeddings to latent vectors.</p>
-                            <a href="https://github.com/Mr-K-AB/text-to-face-generation" target="_blank">
-                            <div id="text-to-face-thumbnail">
-                                <img src="https://opengraph.githubassets.com/1/Mr-K-AB/text-to-face-generation" alt="GitHub Repository Thumbnail">
-                            </div>
-                            </a>
-                        </div>
-                    
-                        <div class="experience-item">
-                            <h4>Project Intern as System Admin for HPC for department cluster</h4>
-                            <p>December 2022 - April 2023 (5 months)<br>
-                            Palghat, Kerala, India</p>
-                            <p>ICSR is the CENTRE FOR INDUSTRY COLLABORATION AND SPONSERED RESEARCH at IIT PALAKKAD. My responsibilities as a project intern included the following, but not limited to.</p>
-                            <p>Settings up and maintaining department cluster for computation and simulation of various molecules, elements, and meterials. And setting up of various packages, libraries and other requirements and utilities required for processes, setting up PBS and SLURM job schedulers and writing job scripts for using various packages for simulation, computation etc in PBS and SLURM job schedulers and workload managers to be used in High Performance Computing Facilities.</p>
-                      </div>
-                    
                     </div>
-      
-              
-                  <h3>Career Development Centre - IIT Palakkad</h3>
-                    <div class="experience-grid">
-                      <div class="experience-item">
-                          <h4>Department coordinator for CS and DS departments in INDUSTRY ACADEMIA CONCLAVE at IIT PALAKKAD</h4>
-                          <p>April 2022 - August 2022 (5 months)<br>
-                          Palghat, Kerala, India</p>
-                          <p>IAC is the prime conclave of IIT PALAKKAD for collaboration between Academia and Industry and for Knowledge sharing between various industries, academia and IIT PALAKKAD. I was the department coordinator for the event held in 2022 August 13 for CS and DS departments, which required immense management and preparations. Responsibility includes contacting industry and academia delegates for attending the event to represent their organisations, and inviting talks in the event, coordination of department events and activities for the event, management of Travel and accommodation for all 50+ delegates attended the event, and many more.</p>
-                      </div>
-                    </div>
-                  
-      </section>
-
-
-
-
-
-
-    
-    
-    
-
-
-        <section id="skills">
-            <h2>Important Skills</h2>
-            <div class="skills-container">
-                <div class="skill-tile">
-                    <img src="images/icons/gcp-icon.svg" alt="GCP Icon">
-                    <span>Google Cloud Platform</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/aws-icon.svg" alt="AWS Icon">
-                    <span>Amazon Web Services</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/gan-icon.png" alt="GAN Icon">
-                    <span>Generative Adversarial Networks (GANs)</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/hpc-icon.png" alt="FastAPI Icon">
-                    <span>HPC</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/fastapi-icon.png" alt="FastAPI Icon">
-                    <span>FastAPI</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/dotnet-icon.png" alt=".NET Icon">
-                    <span>.NET Framework</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/project-management-icon.png" alt="Project Management Icon">
-                    <span>Project Management</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/angular-icon.png" alt="Angular Icon">
-                    <span>Angular</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/neural-networks-icon.png" alt="Neural Networks Icon">
-                    <span>Neural Networks</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/elasticsearch-icon.png" alt="Elasticsearch Icon">
-                    <span>Elasticsearch</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/postgresql-icon.png" alt="PostgreSQL Icon">
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/data-processing-icon.png" alt="Data Processing Icon">
-                    <span>Data Processing</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/docker-kubernetes-icon.png" alt="Docker Kubernetes Icon">
-                    <span>Docker and Kubernetes</span>
-                </div>
-                <div class="skill-tile">
-                    <img src="images/icons/programming-icon.png" alt="programming Icon">
-                    <span>Programming (C, C++, C#, Python, Typescript)</span>
                 </div>
             </div>
+        </section>
 
-
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Professional Experience</h2>
+                <div class="underline"></div>
+            </div>
             
-        </section>
-
-
-
-        
-        <section id="contact">
-            <h2>Get in Touch</h2>
-
-                <div class="contact-info">
-
-
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <p><a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank">www.linkedin.com/in/mr-mis-ab-v-p</a></p>
+            <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+                <!-- Turing Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>Turing</h3>
+                        <p>May 2024 - Present</p>
                     </div>
-
+                    <div class="timeline-content">
+                        <h4>Data Scientist</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Palo Alto (Hybrid)</p>
+                        <ul class="experience-details">
+                            <li>Developed and optimized large-scale AI models, improving accuracy by 12% and reducing training time by 15%</li>
+                            <li>Implemented advanced techniques like reinforcement learning and multimodal processing</li>
+                            <li>Created custom Python functions for LLMs and conducted performance evaluations</li>
+                            <li>Performed data analysis to enhance AI system performance</li>
+                        </ul>
+                    </div>
                 </div>
-
-
-            <br><br>
-
-            <div class="contact-form">
-                <h3>Message</h3>
-                <p>This actually works! Use this to contact</p><br><br>
-                <form id="contact-form">
-                  <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email">
-                  </div>
-                  <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Enter a subject">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Enter your message"></textarea>
-                  </div>
-                  <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                
+                <!-- Siemens Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>Siemens</h3>
+                        <p>May 2023 - Sept 2023</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Full Stack Developer Intern</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</p>
+                        <ul class="experience-details">
+                            <li>Trained AI-ML models with TensorFlow and PyTorch</li>
+                            <li>Developed frontend applications using Angular and React</li>
+                            <li>Designed APIs using OpenAPI and FastAPI</li>
+                            <li>Implemented data processing pipelines for machine learning projects</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- IIT Palakkad Experiences -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>IIT Palakkad</h3>
+                        <p>2022 - 2024</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>General Secretary Academic Affairs</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Palghat, Kerala, India</p>
+                        <ul class="experience-details">
+                            <li>Represented the institute community in academic matters</li>
+                            <li>Planned and executed the Industry Academia Conclave with 50+ industry delegates</li>
+                            <li>Managed the institute career development cell activities</li>
+                            <li>Selected through competitive election process</li>
+                        </ul>
+                        
+                        <div class="sub-experiences">
+                            <div class="sub-experience">
+                                <h5>.NET Core Project Manager</h5>
+                                <p>Aug 2023 - Dec 2023</p>
+                                <p>Led development of a messaging application using .NET Core</p>
+                            </div>
+                            
+                            <div class="sub-experience">
+                                <h5>HPC System Administrator</h5>
+                                <p>Dec 2022 - Apr 2023</p>
+                                <p>Set up and maintained department cluster for computation and simulation</p>
+                            </div>
+                            
+                            <div class="sub-experience">
+                                <h5>Text-to-Face Generation Project</h5>
+                                <p>Jan 2024 - Apr 2024</p>
+                                <p>Developed GAN-based model to generate facial images from text descriptions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-
-        <!-- EmailJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function(){
-        emailjs.init("nmpZNndUjXZk-eQmw");
-        })();
-
-
-        const form = document.getElementById('contact-form');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const subjectInput = document.getElementById('subject');
-        const messageInput = document.getElementById('message');
-        const subscribeCheckbox = document.getElementById('subscribe');
-
-        form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = {
-            name: nameInput.value,
-            email: emailInput.value,
-            subject: subjectInput.value,
-            message: messageInput.value
-        };
-
-        // Send the form data via EmailJS
-        emailjs.send('service_h14jqje', 'template_jqwxazi', formData)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            form.reset();
-            alert('Message sent successfully!');
-        }, (error) => {
-            console.error('FAILED...', error);
-            alert('There was an error sending your message.');
-        });
-
-        // Reset the form after successful submission
-        form.reset();
-
-        });
-    </script>
-
-
         
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technical Skills</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="skills-categories" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skills-container">
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                            <span>TensorFlow & PyTorch</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                            <span>Neural Networks</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <span>GANs</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                            <span>NLP</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Software Development</h3>
+                    <div class="skills-container">
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-angular"></i></div>
+                            <span>Angular</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span>React</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span>Python & FastAPI</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                            <span>.NET Framework</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Cloud & Infrastructure</h3>
+                    <div class="skills-container">
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-google"></i></div>
+                            <span>Google Cloud Platform</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                            <span>Amazon Web Services</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span>Docker & Kubernetes</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tile">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <span>HPC</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section (New) -->
+        <section id="projects" class="section-padding">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Projects</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="projects-container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Messenger App Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://opengraph.githubassets.com/1/Mr-K-AB/se-proj1-messenger" alt="MessengerApp Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>MessengerApp</h3>
+                        <p>.NET Core messaging application with real-time communication capabilities</p>
+                        <div class="project-tags">
+                            <span class="tag">.NET Core</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">SignalR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Mr-K-AB/se-proj1-messenger" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text-to-Face Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://opengraph.githubassets.com/1/Mr-K-AB/text-to-face-generation" alt="Text-to-Face Generation Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Text-to-Face Generation</h3>
+                        <p>GAN-based model that generates facial images from textual descriptions</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">GANs</span>
+                            <span class="tag">StyleGAN3</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Mr-K-AB/text-to-face-generation" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- eCommerce Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://opengraph.githubassets.com/1/mr_ab/shoe-hub" alt="Shoe Hub eCommerce Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Shoe Hub</h3>
+                        <p>Full-featured eCommerce platform for footwear with custom database schema</p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://gitlab.com/mr_ab/shoe-hub" target="_blank" class="project-link">
+                                <i class="fab fa-gitlab"></i> View Code
+                            </a>
+                            <a href="#" class="project-link demo-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more-container" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://github.com/Mr-K-AB" target="_blank" class="btn primary-btn">View More Projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Get in Touch</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>Mr_MIS-AB_Profile@outlook.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank">mr-mis-ab-v-p</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/Mr-K-AB" target="_blank">Mr-K-AB</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Send a Message</h3>
+                    <p>Have a question or want to work together? Send me a message!</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>V P MIS AB</h3>
+                <p>Data Scientist | Full Stack Developer | AI/ML Enthusiast</p>
                 <p>&copy; 2025 V P MIS AB. All rights reserved.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#summary">About Me</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -395,7 +528,7 @@
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/mr-mis-ab-v-p" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Mr-K-AB" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:Mr_MIS-AB_Profile@outlook.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:Mr_MIS-AB_Profile@outlook.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -403,7 +536,15 @@
             <p>Designed and developed by V P MIS AB</p>
         </div>
     </footer>
-
-
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
