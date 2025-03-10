@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize EmailJS
     (function() {
-        emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+        // Replace with your actual EmailJS public key
+        emailjs.init("nmpZNndUjXZk-eQmw");
     })();
 
     // Mobile menu toggle
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission with EmailJS
+    // Form submission with EmailJS - FIXED IMPLEMENTATION
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -63,36 +64,84 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             // Get form data
-            const formData = {
-                name: contactForm.querySelector('#name').value,
-                email: contactForm.querySelector('#email').value,
-                subject: contactForm.querySelector('#subject').value,
-                message: contactForm.querySelector('#message').value
+            const name = contactForm.querySelector('#name').value;
+            const email = contactForm.querySelector('#email').value;
+            const subject = contactForm.querySelector('#subject').value;
+            const message = contactForm.querySelector('#message').value;
+            
+            // Form validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            // Prepare template parameters
+            const templateParams = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
             };
             
             // Send email using EmailJS
             emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-                formData
+                'service_h14jqje',       // EmailJS service ID
+                'template_jqwxazi',      // EmailJS template ID
+                templateParams
             )
             .then(function(response) {
-                // Success message
-                alert('Your message has been sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+                
+                // Create success message element
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Your message has been sent successfully!';
+                
+                // Insert success message after form
+                contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
+                
+                // Reset form
                 contactForm.reset();
                 
                 // Reset button
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
+                
+                // Remove success message after 5 seconds
+                setTimeout(function() {
+                    successMessage.remove();
+                }, 5000);
             })
             .catch(function(error) {
-                // Error message
-                console.error('EmailJS error:', error);
-                alert('There was an error sending your message. Please try again later.');
+                console.error('FAILED...', error);
+                
+                // Create error message element
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again later.';
+                
+                // Insert error message after form
+                contactForm.parentNode.insertBefore(errorMessage, contactForm.nextSibling);
                 
                 // Reset button
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
+                
+                // Remove error message after 5 seconds
+                setTimeout(function() {
+                    errorMessage.remove();
+                }, 5000);
             });
         });
     }
